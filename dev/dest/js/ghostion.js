@@ -1096,7 +1096,8 @@ window.Modernizr=function(a,b,c){function d(a){t.cssText=a}function e(a,b){retur
 }(jQuery, this, this.document));
 
 /* Disqus Comment */
-var disqus_identifier = '{{post.id}}';
+//var disqus_identifier = '{{post.id}}';
+var disqus_identifier = '';
 var atPost = atPost || {};
 atPost.loadDisqus = function() {
     var dsq = document.createElement('script');
@@ -1105,6 +1106,7 @@ atPost.loadDisqus = function() {
     dsq.src = '//' + ghostionConfig.disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 };
+
 /*global jQuery */
 /*jshint multistr:true browser:true */
 /*!
