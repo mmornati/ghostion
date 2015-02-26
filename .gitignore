@@ -4,3 +4,4 @@
 /releases/*
 dev/dest/css/ghostion.css
 packages/theme/assets/css/ghostion.min.css
+dev/tmp/*
