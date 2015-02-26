@@ -2,3 +2,5 @@
 *.sass-cache
 /node_modules/*
 /releases/*
+dev/dest/css/ghostion.css
+packages/theme/assets/css/ghostion.min.css

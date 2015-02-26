@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 });
 
 // Zip Packages Files
-gulp.task('zip', function() {
+gulp.task('zip', ['concat', 'scss'], function() {
     return eventstream.concat (
         // Zip Theme Files
         gulp.src('**', {cwd: path.join(process.cwd(), 'packages/theme')})
