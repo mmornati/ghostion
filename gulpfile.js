@@ -2,7 +2,7 @@
 var gulp        = require('gulp'),
     eventstream = require('event-stream'),
     path        = require('path');
-    sass        = require('gulp-ruby-sass'),
+    sass        = require('gulp-sass'),
     rename      = require('gulp-rename'),
     minifycss   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
@@ -96,4 +96,11 @@ gulp.task('develop', function() {
 // Main Task: Release
 gulp.task('release', ['zip'], function() {
     gulp.start('move_zip', 'clean_tmp');
+});
+
+// Development Task. Deploy to Docker Shared Volume
+gulp.task('deploy', ['scss'], function() {
+   gulp.src('packages/theme/*')
+        .pipe(gulp.dest('/Users/Shared/ghost-override/content/themes/ghostion'))
+        .pipe(notify({message: 'All Files Deployed Successfully'}));
 });
