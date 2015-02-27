@@ -49,7 +49,7 @@ gulp.task('watch', function() {
 });
 
 // Zip Packages Files
-gulp.task('zip', function() {
+gulp.task('zip', ['scss', 'concat'], function() {
     return eventstream.concat (
         // Zip Theme Files
         gulp.src('**', {cwd: path.join(process.cwd(), 'packages/theme')})
@@ -101,7 +101,7 @@ gulp.task('release', ['zip'], function() {
 });
 
 // Development Task. Deploy to Docker Shared Volume
-gulp.task('deploy', function() {
+gulp.task('deploy', ['scss', 'concat'], function() {
    gulp.src('packages/theme/**/*')
         .pipe(gulp.dest('/Users/Shared/ghost-override/content/themes/ghostion'))
         .pipe(notify({message: 'All Files Deployed Successfully'}));
