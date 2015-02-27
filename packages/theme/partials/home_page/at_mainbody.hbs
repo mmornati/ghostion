@@ -3,6 +3,9 @@
         <div class="large-12 columns">
             {{#foreach posts}}
                 <article class="{{post_class}} at_block">
+                    {{#if image}}
+                    <div class="at_post_featimg" style="background: url({{image}}); background-size: contain; background-repeat: no-repeat;"></div>
+                    {{/if}}
                     <div class="at_post_header">
                         <h2 class="at_post_title"><a href="{{url}}">{{{title}}}</a></h2>
                     </div>

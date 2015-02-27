@@ -2,6 +2,7 @@
 *.sass-cache
 /node_modules/*
 dev/dest/css/*
+dev/dest/js/*
 /releases/*
 dev/tmp/*
 packages/theme/assets/css/ghostion.css.min.map
