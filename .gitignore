@@ -1,7 +1,9 @@
 *.DS_Store
 *.sass-cache
 /node_modules/*
+dev/dest/css/*
 /releases/*
-dev/dest/css/ghostion.css
-packages/theme/assets/css/ghostion.min.css
 dev/tmp/*
+packages/theme/assets/css/ghostion.css.min.map
+packages/theme/assets/css/ghostion.min.css
+packages/theme/assets/js/ghostion.min.js

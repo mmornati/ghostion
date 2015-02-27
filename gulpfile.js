@@ -3,6 +3,7 @@ var gulp        = require('gulp'),
     eventstream = require('event-stream'),
     path        = require('path');
     sass        = require('gulp-sass'),
+    sourcemaps  = require('gulp-sourcemaps'),
     rename      = require('gulp-rename'),
     minifycss   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
@@ -14,7 +15,7 @@ var gulp        = require('gulp'),
 // Compile scss Files
 gulp.task('scss', function() {
     return gulp.src('dev/src/scss/ghostion.scss')
-        .pipe(sass({style: 'expanded', quiet: true, cacheLocation: 'dev/src/scss/.sass-cache'}))
+        .pipe(sass({style: 'expanded', quiet: true, cacheLocation: 'dev/src/scss/.sass-cache', errLogToConsole: true}))
         .pipe(gulp.dest('dev/dest/css'))
         .pipe(minifycss())
         .pipe(rename({suffix: '.min'}))
@@ -42,12 +43,13 @@ gulp.task('concat', function() {
 
 // Watch scss and JS Files
 gulp.task('watch', function() {
-    gulp.watch('dev/src/scss/**/*.scss', ['scss']);
-    gulp.watch('dev/src/js/*.js', ['concat']);
+    gulp.watch('dev/src/scss/**/*.scss', ['scss', 'deploy']);
+    gulp.watch('dev/src/js/*.js', ['concat', 'deploy']);
+    gulp.watch('packages/theme/**/*.hbs', ['deploy']);
 });
 
 // Zip Packages Files
-gulp.task('zip', ['concat', 'scss'], function() {
+gulp.task('zip', function() {
     return eventstream.concat (
         // Zip Theme Files
         gulp.src('**', {cwd: path.join(process.cwd(), 'packages/theme')})
@@ -99,8 +101,8 @@ gulp.task('release', ['zip'], function() {
 });
 
 // Development Task. Deploy to Docker Shared Volume
-gulp.task('deploy', ['scss'], function() {
-   gulp.src('packages/theme/*')
+gulp.task('deploy', function() {
+   gulp.src('packages/theme/**/*')
         .pipe(gulp.dest('/Users/Shared/ghost-override/content/themes/ghostion'))
         .pipe(notify({message: 'All Files Deployed Successfully'}));
 });
