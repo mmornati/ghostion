@@ -3,7 +3,6 @@ var gulp        = require('gulp'),
     eventstream = require('event-stream'),
     path        = require('path');
     sass        = require('gulp-sass'),
-    sourcemaps  = require('gulp-sourcemaps'),
     rename      = require('gulp-rename'),
     minifycss   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
