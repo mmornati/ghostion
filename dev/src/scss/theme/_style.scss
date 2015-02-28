@@ -68,6 +68,11 @@ img {
 //*-----------------------------------------
 #at_header {
 	background: $header_background_color;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	left: 0;
+	right: 0;
+	z-index: 1;
+	position: fixed;
 	.top-bar, .top-bar-section ul {
 		background: transparent;
 	}
@@ -121,13 +126,14 @@ ul.off-canvas-list {
 	background: rgba(255, 255, 255, 0.2);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 3px;
-	position: absolute;
+	position: fixed;
     padding: 5px 12px;
     top: 8px;
     left: 8px;
     &:hover {
     	color: #fff;
     }
+    z-index: 2;
 }
 
 //*-----------------------------------------
