@@ -1,22 +1,22 @@
 //*-----------------------------------------
 //* Main Color
 //*-----------------------------------------
-$primary_color: 					#0D96C8;
-$base_text_color: 					#686868;
-$base_background_color: 			#fff;
+$primary_color: 					#009688;
+$base_text_color: 					#212121;
+$base_background_color: 			#E0F2F1;
 
 //*-----------------------------------------
 //* Base Color
 //*-----------------------------------------
-$header_background_color: 			shade($primary_color, 80%);
+$header_background_color: 			#004D40;
 $logo_text_color: 					#fff;
-$menu_text_color: 					#fff;
-$showcase_text_color: 				#fff;
-$showcase_background_color: 		shade($primary_color, 50%);
-$top_text_color: 					#fff;
-$top_background_color: 				shade($primary_color, 60%);
-$footer_text_color: 				#fff;
-$footer_background_color: 			shade($primary_color, 80%);
+$menu_text_color: 					#E0F2F1;
+$showcase_text_color: 				#E0F2F1;
+$showcase_background_color: 		#00796B;
+$top_text_color: 					#E0F2F1;
+$top_background_color: 				#00695C;
+$footer_text_color: 				#E0F2F1;
+$footer_background_color: 			#004D40;
 $featured_label_color: 				#F4C445;
 
 //*-----------------------------------------

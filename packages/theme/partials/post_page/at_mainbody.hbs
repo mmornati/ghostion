@@ -4,6 +4,9 @@
             {{#post}}
             <div class="at_block">
                 <article class="{{post_class}}">
+                    {{#if image}}
+                    <img src="{{image}}" class="at_post_featimg"></img>
+                    {{/if}}
                     <div class="at_post_content">
                         {{content}}
                     </div>

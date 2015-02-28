@@ -4,7 +4,7 @@
             {{#foreach posts}}
                 <article class="{{post_class}} at_block">
                     {{#if image}}
-                    <div class="at_post_featimg" style="background: url({{image}}); background-size: contain; background-repeat: no-repeat;"></div>
+                    <img src="{{image}}" class="at_post_featimg"></img>
                     {{/if}}
                     <div class="at_post_header">
                         <h2 class="at_post_title"><a href="{{url}}">{{{title}}}</a></h2>

@@ -79,13 +79,16 @@
 }
 
 .at_post_featimg {
+	background: #80CBC4;
+	border: 1px solid #66c0b7;
+	padding: 5px;
+	border-radius: 100%;
 	float: left;
 	margin-right: 20px;
+	margin-bottom: 2px;
 	width: 120px;
 	height: 120px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);}
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
