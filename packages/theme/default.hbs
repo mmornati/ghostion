@@ -21,11 +21,16 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/jquery-2.1.0.min.js"><\/script>')</script>  
+    <script>
+        $(window).bind("load", function () {
+            $(document).foundation();
+        });
+    </script>
 </head>
 <body class="{{body_class}}">
     {{! The main JavaScript file for Ghostion }}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/assets/js/jquery-2.1.0.min.js"><\/script>')</script>  
     <script>
         /*** CONFIGURATION VARIABLES: EDIT THE VALUES BELOW FOR THEME CONFIGURATION ***/
         var ghostionConfig = {
