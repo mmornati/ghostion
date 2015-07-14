@@ -1,5 +1,5 @@
 /* Disqus Comment */
-//var disqus_identifier = '{{post.id}}';
+//var disqus_identifier = '{{post.uuid}}';
 var disqus_identifier = '';
 var atPost = atPost || {};
 atPost.loadDisqus = function() {
